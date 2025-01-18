@@ -40,18 +40,6 @@
           <p class="certification-organization">
             {{ certification.organization || "Organization" }}
           </p>
-          <p v-if="certification.issueDate" class="certification-date">
-            <i class="fas fa-calendar-alt"></i> {{ certification.issueDate }}
-          </p>
-          <a
-            v-if="certification.link"
-            :href="certification.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="view-certificate-link"
-          >
-            View Certificate <i class="fas fa-external-link-alt"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -80,9 +68,6 @@ export default {
 
 <style scoped>
 .certifications {
-  /* background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png') #f5f5f5; */
-  /* background-size: cover; */
-  /* background-color: white; */
   color: #333;
   text-align: center;
   padding: 2rem 1rem;
