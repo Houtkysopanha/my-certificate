@@ -1,11 +1,13 @@
 <template>
   <section class="certifications">
+   <header>
     <h2 class="section-title" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1e293b;
     padding: 10px
     ;color: whitesmoke;
     
-    ">My Certifications</h2>   
+    ">My Certificates </h2>   
+   </header>
     <div class="button-grid">
       <div class="button-wrapper">
         <button class="gradient-border-button">
@@ -40,18 +42,6 @@
           <p class="certification-organization">
             {{ certification.organization || "Organization" }}
           </p>
-          <p v-if="certification.issueDate" class="certification-date">
-            <i class="fas fa-calendar-alt"></i> {{ certification.issueDate }}
-          </p>
-          <a
-            v-if="certification.link"
-            :href="certification.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="view-certificate-link"
-          >
-            View Certificate <i class="fas fa-external-link-alt"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -65,13 +55,15 @@ export default {
   data() {
     return {
       certifications: [
-        { id: 1, image: require("../assets/Nov-2024.png") },
-        { id: 2, image: require("../assets/4-may-24.png") },
-        { id: 3, image: require("../assets/8-feb-24.png") },
-        { id: 4, image: require("../assets/8-feb-24(2).png") },
-        { id: 5, image: require("../assets/18-feb-24.png") },
-        { id: 6, image: require("../assets/march-2023.jpg") },
-        { id: 7, image: require("../assets/nov-2022.jpg") },
+        { id: 1, image: require("../assets/Dev-nov-3-24.jpeg") },
+        { id: 2, image: require("../assets/13-july-24-web.jpeg") },
+        { id: 3, image: require("../assets/Nov-2024.png") },
+        { id: 4, image: require("../assets/4-may-24.png") },
+        { id: 5, image: require("../assets/8-feb-24.png") },
+        { id: 6, image: require("../assets/8-feb-24(2).png") },
+        { id: 7, image: require("../assets/18-feb-24.png") },
+        { id: 8, image: require("../assets/march-2023.jpg") },
+        { id: 9, image: require("../assets/nov-2022.jpg") },
       ],
     };
   },
@@ -80,9 +72,6 @@ export default {
 
 <style scoped>
 .certifications {
-  /* background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png') #f5f5f5; */
-  /* background-size: cover; */
-  /* background-color: white; */
   color: #333;
   text-align: center;
   padding: 2rem 1rem;
@@ -120,8 +109,8 @@ export default {
 }
 
 .certification-image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 360px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -221,6 +210,25 @@ export default {
 }
 
 /* Media Queries */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .certification-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  }
+
+  .certification-title {
+    font-size: 1rem;
+  }
+  .certification-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+}
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -233,6 +241,12 @@ export default {
   .certification-title {
     font-size: 1rem;
   }
+  .certification-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
 }
 @media (max-width: 480px) {
   .section-title {
@@ -244,8 +258,16 @@ export default {
   }
 
   .gradient-border-button {
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     font-size: 1rem;
   }
+  .certification-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
+}
+
+
 </style>
