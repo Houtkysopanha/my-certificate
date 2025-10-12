@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       certifications: [
-        { id: 12, image: require("../assets/ai_camtect.jpg"), title: "Build Your AI App | 05, July 2025", organization: "Paragon" },
+        { id: 12, image: require("../assets/ai_camtect.jpg"), title: "Build Your AI App | 05, July 2025", organization: "neWwave|CamTech" },
         { id: 11, image: require("../assets/paragon.jpg"), title: "Website UX/UI Design (Bootcamp) | May 31, June 1,7 and 8 2025", organization: "Paragon" },
         { id: 10, image: require("../assets/Screenshot 2025-03-09 at 9.56.19 in the morning.png"), title: "EdTech Summit Cambodia(Volunteer) | February 17-18, 2025", organization: "MoEYS" },
         { id: 3, image: require("../assets/Nov-2024.png"), title: "Time Management | November 19, 2024", organization: "Linkedin Learning" },
